@@ -17,34 +17,7 @@ void dfs(int at,int pt,vector<int>&dis){
 	    }
 }
 void solve(int test){
-    int n;
-    std::cin>>n;
-    if(n==1){
-        std::cout<<0;return;
-    }
-    for(int i=0;i<n-1;i++){
-        int x,y;
-        std::cin >> x;
-        std::cin >> y;
-        x--;y--;
-        graph[x].push_back(y);graph[y].push_back(x);
-    }
-    vector<int> dis(n,0);vector<int> diss(n,0);
-		dfs(0,-1,dis);int n1=0;int n2=0;int max=0;
-		for(int i=0;i<n;i++) {
-			if(dis[i]>=max) {max=dis[i];n1=i;}
-		}
-		dfs(n1,-1,diss);max=0;	
-		
-		for(int i=0;i<n;i++) {
-			if(diss[i]>=max) {max=diss[i];n2=i;}
-		}
-		vector<int> dis1(n,0);
-		vector<int> dis2(n,0);
-		dfs(n1,-1,dis1);dfs(n2,-1,dis2);
-		for(int i=0;i<n;i++) {
-			std::cout<< std::max(dis1[i],dis2[i]) <<' ';
-		}
+        
 		std:: cout<< endl;
 }
 int main(){
