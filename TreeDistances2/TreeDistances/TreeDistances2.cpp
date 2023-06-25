@@ -44,6 +44,7 @@ void solve(int test){
         x--;y--;
         graph[x].push_back(y);graph[y].push_back(x);
     }
+    // int pqs=0;
         pre(0,-1);
 		ans[0]=sbans[0];
 		for(int child:graph[0])answ(child,0);
